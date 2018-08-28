@@ -1,0 +1,27 @@
+{
+  "name": "jest-mysql-diff",
+  "version": "0.0.1",
+  "description": "a mysql helper for jest",
+  "main": "index.js",
+  "repository": "git@github.com:nestattacked/jest-mysql-diff.git",
+  "author": "Yang Chun <yang283349242@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest test --runInBand"
+  },
+  "dependencies": {
+    "diff": "^3.5.0",
+    "fs-extra": "^7.0.0",
+    "promise-mysql": "^3.3.1"
+  },
+  "devDependencies": {
+    "jest": "^23.5.0"
+  },
+  "jest": {
+    "coverageDirectory": "coverage",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov"
+    ]
+  }
+}

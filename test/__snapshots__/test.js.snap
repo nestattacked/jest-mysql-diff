@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`work without error 1`] = `
+Object {
+  "[table1][id,int,varchar,text]": Array [
+    "- [2,2,\\"two\\",\\"two\\"]",
+    "+ [4,4,\\"four\\",\\"four\\"]",
+  ],
+}
+`;
