@@ -4,7 +4,9 @@ jest-mysql-diff can find out changes of database after executing some code. It c
 
 # Install
 
+```
 npm install jest-mysql-diff
+```
 
 # How to use
 
@@ -36,7 +38,7 @@ async afterAllTest() {
 
 # Used in Jest
 
-You can create `MysqlDiffer` object and register some sql files in `globalSetup`. And then call `use` in `beforeEach` to reset database. Use `diff` to get changes and compare it with snapshot to make sure database changes as expected. Finally, we can call `end` in `globalTeardown` to close connecton.
+You can create `MysqlDiffer` object and register some sql files in `globalSetup`. And then call `use` in `beforeEach` to reset database. Use `diff` to get changes and compare it with snapshot to make sure database changes are expected. Finally, we can call `end` in `globalTeardown` to close connecton.
 
 ```javascript
 test('some test', async () => {
@@ -49,9 +51,9 @@ test('some test', async () => {
 
 # Make it fast
 
-MysqlDiffer will read whole database and it will make test become very slow. Running Mysql in memory can speed it up.
+MysqlDiffer will read whole database and make tests become very slow. Running Mysql in memory can speed it up.
 
-In unix system, there is a directory `/dev/shm`, it works just like normal file system except it keeps data in momery instead of disk.
+In unix system, there is a directory `/dev/shm`, it works just like normal file system except it keeps data in momery instead of disk. So just set Mysql data directory to it.
 
 # API
 
@@ -74,7 +76,7 @@ const differ = new MysqlDiffer(options);
 
 ### MysqlDiffer.register
 
-`register` will execute a sql file and remember how database looks, also, will name it.
+`register` will execute a sql file and remember how database looks like. First parameter will name the corresponding sql file.
 
 ```javascript
 await differ.register('main', 'your-sql-absolute-path');
